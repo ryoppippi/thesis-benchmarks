@@ -1,85 +1,33 @@
+import type {tags} from "typia";
+
 export type TypiaSchema = {
   id: number;
   created: Date;
-  /**
-   * @minLength 1
-   * @maxLength 100
-   */
-  title: string;
-  /**
-   * @minLength 1
-   * @maxLength 30
-   */
-  brand: string;
-  /**
-   * @minLength 1
-   * @maxLength 500
-   */
-  description: string;
-  /**
-   * @minimum 1
-   * @maximum 10000
-   */
-  price: number | null;
-  /**
-   * @minimum 1
-   * @maximum 100
-   */
-  discount: number | null;
-  /**
-   * @minimum 1
-   * @maximum 10
-   */
-  quantity: number;
-  /**
-   * @minItems 1
-   * @maxItems 30
-   */
-  tags: string[];
+  title: string & tags.MinLength<1> & tags.MaxLength<100>;
+  brand: string & tags.MinLength<1> & tags.MaxLength<30>;
+  description: string & tags.MinLength<1> & tags.MaxLength<500>;
+  price: null | number & tags.Minimum<1> & tags.Maximum<10000>;
+  discount: null | number & tags.Minimum<1> & tags.Maximum<100>;
+  quantity: number & tags.Minimum<1> & tags.Maximum<10>;
+  tags: string[] & tags.MinItems<1> & tags.MaxItems<30>;
   images: {
     id: number;
     created: Date;
-    /**
-     * @minLength 1
-     * @maxLength 100
-     */
-    title: string;
+    title: string & tags.MinLength<1> & tags.MaxLength<100>;
     type: "jpg" | "png";
-    /**
-     * @format url
-     */
-    url: string;
+    url: string & tags.Format<"url">;
   }[];
   ratings: {
     id: number;
-    /**
-     * @minimum 1
-     * @maximum 5
-     */
-    stars: number;
-    /**
-     * @minLength 1
-     * @maxLength 100
-     */
-    title: string;
-    /**
-     * @minLength 1
-     * @maxLength 1000
-     */
-    text: string;
+    stars: number & tags.Minimum<1> & tags.Maximum<5>;
+    title: string & tags.MinLength<1> & tags.MaxLength<100>;
+    text: string & tags.MinLength<1> & tags.MaxLength<1000>;
     images: {
       id: number;
       created: Date;
-      /**
-       * @minLength 1
-       * @maxLength 100
-       */
-      title: string;
+      title: string & tags.MinLength<1> & tags.MaxLength<100>;
       type: "jpg" | "png";
-      /**
-       * @format url
-       */
-      url: string;
+      url: string & tags.Format<"url">;
     }[];
   }[];
 };

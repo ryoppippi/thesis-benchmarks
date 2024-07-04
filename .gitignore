@@ -37,3 +37,4 @@ tmp
 .DS_Store
 Thumbs.db
 *.pem
+/.pnpm_store
