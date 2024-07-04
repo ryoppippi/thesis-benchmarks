@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "license": "MIT",
   "author": "Fabian Hiller",
+  "type": "module",
   "scripts": {
     "build": "npx tsc",
     "postinstall": "ts-patch install"
