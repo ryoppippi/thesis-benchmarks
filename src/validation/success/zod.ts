@@ -1,4 +1,4 @@
-import { successData } from "../../data/success";
+import { successData } from "../../data/success" with { type: 'macro' };
 import { getZodSchema } from "../../schemas/zod";
 
 const runs = parseInt(process.argv[2]) || 1;

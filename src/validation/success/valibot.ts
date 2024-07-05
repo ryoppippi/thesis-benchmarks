@@ -1,4 +1,4 @@
-import { successData } from "../../data/success";
+import { successData } from "../../data/success" with { type: 'macro' };
 import { getValibotSchema } from "../../schemas/valibot";
 import * as v from "valibot";
 

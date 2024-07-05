@@ -1,4 +1,6 @@
-export const successData = {
+import process from 'node:process';
+
+const _successData = {
   id: 252,
   created: new Date(),
   title: "Apple",
@@ -77,3 +79,5 @@ export const successData = {
     },
   ],
 };
+
+export const successData = process.env.BUNDLE_BENCH === '1' ? {} : _successData;

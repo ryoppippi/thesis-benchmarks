@@ -1,4 +1,4 @@
-import { errorData } from "../../data/error";
+import { errorData } from "../../data/error" with { type: 'macro' };
 import { getArkTypeSchema } from "../../schemas/arktype";
 
 const runs = parseInt(process.argv[2]) || 1;

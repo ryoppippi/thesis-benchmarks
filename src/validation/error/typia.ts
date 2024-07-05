@@ -1,5 +1,5 @@
 import typia from "typia";
-import { errorData } from "../../data/error";
+import { errorData } from "../../data/error" with { type: 'macro' };
 import type { TypiaSchema } from "../../schemas/typia";
 
 const runs = parseInt(process.argv[2]) || 1;

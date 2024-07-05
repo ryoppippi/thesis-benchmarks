@@ -5,9 +5,11 @@ import typescript from '@rollup/plugin-typescript';
 import nodeResolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 import terser from '@rollup/plugin-terser';
-import unpluginTypia from '@ryoppippi/unplugin-typia/rollup'
+import unpluginTypia from '@ryoppippi/unplugin-typia/rollup';
+import Macros from 'unplugin-macros/rollup'
 
-const entries = {}
+
+const entries = {};
 for await (const path of glob(resolve(import.meta.dirname, './src/validation/success/*.ts'))) {
   if (path == null) continue
   const filename = path.split('/').at(-1).replace('.ts', '')
@@ -36,6 +38,7 @@ export default defineConfig(
         ],
       },
       plugins: [
+        Macros(),
         unpluginTypia({ cache: false, log: false}),
         nodeResolve(),
         commonjs(),

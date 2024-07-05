@@ -1,4 +1,6 @@
-export const errorData = {
+import process from 'node:process';
+
+const _errorData = {
   id: 252,
   created: new Date(),
   title: "", // "Apple"
@@ -78,3 +80,5 @@ export const errorData = {
     },
   ],
 };
+
+export const errorData = process.env.BUNDLE_BENCH === '1' ? {} : _errorData;

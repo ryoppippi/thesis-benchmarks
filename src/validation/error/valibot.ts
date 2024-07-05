@@ -1,4 +1,4 @@
-import { errorData } from "../../data/error";
+import { errorData } from "../../data/error" with { type: 'macro' };
 import { getValibotSchema } from "../../schemas/valibot";
 import * as v from "valibot";
 
