@@ -41,10 +41,8 @@ You can also see the result from GitHub Actions.
 
 | Version         | Simpler Schema | Simpler Schema (Gzip) | Large Schema | Large Schema (Gzip) | Notes                      |
 |-----------------|----------------|-----------------------|--------------|---------------------|----------------------------|
-| 6.0.6           | 36.47 KiB      | 10.1 KiB              | 44.75 KiB    | 11.03 KiB           | Only CJS                   |
-| 6.1.2           | 36.45 KiB      | 10.1 KiB              | 44.73 KiB    | 11.03 KiB           | First ESM Support          |
-| 6.2.2           | 36.45 KiB      | 10.1 KiB              | 44.73 KiB    | 11.03 KiB           |                            |
-| 6.3.3           | 36.59 KiB      | 10.15 KiB             | 44.87 KiB    | 11.08 KiB           |                            |
+| 6.0.5           | 65.99 KiB      | 14.51 KiB             | 74.26 KiB    | 15.43 KiB           | Only CJS                   |
+| 6.0.6           | 36.47 KiB      | 10.1 KiB              | 44.75 KiB    | 11.03 KiB           | First ESM Support          |
 | 6.4.0           | 6.76 KiB       | 2.69 KiB              | 15.04 KiB    | 3.64 KiB            | ESM with file splitting    |
 | 6.4.1           | 2.53 KiB       | 1.1 KiB               | 10.8 KiB     | 2.06 KiB            | Enable `sideEffects=false` |
 | valibot(0.35.0) | 4.01 KiB       | 1.43 KiB              | 6.05 KiB     | 1.89 KiB            |                            |
