@@ -22,6 +22,12 @@ for await (const path of  glob(resolve(import.meta.dirname, './src/validation/er
   entries[`error/${filename}`] = path
 }
 
+for await (const path of  glob(resolve(import.meta.dirname, './src/simple-schemas/*.ts'))) {
+  if (path == null) continue
+  const filename = path.split('/').at(-1).replace('.ts', '')
+  entries[`simpler/${filename}`] = path
+}
+
 export default defineConfig(
   Object.entries(entries).map(([name, path]) => 
     ({

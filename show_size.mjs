@@ -5,13 +5,17 @@ console.log(tabularFilesizeGzip([
     title: 'Bundle size',
     groups: [
       {
-        title: 'Success files',
-        files: './dist/success/*',
+        title: 'simpler schema',
+        files: './dist/simpler/*',
       },
       {
-        title: 'Error files',
-        files: './dist/error/*',
-      }
+        title: 'large schema',
+        files: './dist/success/*',
+      },
+      // {
+      //   title: 'Error files',
+      //   files: './dist/error/*',
+      // },
     ],
   },
 ]))

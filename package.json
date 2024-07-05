@@ -5,7 +5,8 @@
   "author": "Fabian Hiller",
   "type": "module",
   "scripts": {
-    "build": "rimraf ./dist && rollup -c --silent",
+    "build": "rimraf ./dist && rollup -c",
+    "build:size": "rimraf ./dist && BUNDLE_BENCH=1 rollup -c && node ./show_size.mjs",
     "showsize": "node ./show_size.mjs",
     "postinstall": "ts-patch install"
   },
