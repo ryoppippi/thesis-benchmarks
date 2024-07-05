@@ -1,4 +1,4 @@
-import { resolve, } from 'path'
+import { resolve } from 'path'
 import { fspGlob as glob } from 'glob-native'
 import { defineConfig } from 'rollup'
 import typescript from '@rollup/plugin-typescript';
@@ -6,7 +6,6 @@ import nodeResolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 import terser from '@rollup/plugin-terser';
 import unpluginTypia from '@ryoppippi/unplugin-typia/rollup'
-import size from 'rollup-plugin-size';
 
 const entries = {}
 for await (const path of glob(resolve(import.meta.dirname, './src/validation/success/*.ts'))) {
@@ -34,10 +33,6 @@ export default defineConfig(
             mangle: true,
             compress: true,
           }),
-          { generateBundle: () => console.log(`\n${name} size:`) },
-          size({ compression: 'none' }),
-          { generateBundle: () => console.log(`\n${name} size (gzip):`) },
-          size({ compression: 'gzip' }),
         ],
       },
       plugins: [
