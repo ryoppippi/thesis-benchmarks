@@ -6,6 +6,7 @@
   "type": "module",
   "scripts": {
     "build": "rimraf ./dist && rollup -c --silent",
+    "showsize": "node ./show_size.mjs",
     "postinstall": "ts-patch install"
   },
   "dependencies": {
@@ -18,6 +19,7 @@
     "rimraf": "^5.0.7",
     "rollup": "^4.18.0",
     "rollup-plugin-size": "^0.3.1",
+    "tabular-filesize-gzip": "^2.1.1",
     "typia": "6.4.1",
     "unplugin-macros": "^0.13.1",
     "valibot": "0.35.0",
